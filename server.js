@@ -43,7 +43,7 @@ async function fetchEthPrice() {
     }
 }
 
-app.get('/address/balance/:walletAddress', async (req, res) => {
+app.get('/base-sepolia/address/:address/balances/', async (req, res) => {
     try {
         const { walletAddress } = req.params;
         const balance = await fetchEthBalance(walletAddress);
